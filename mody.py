@@ -2,7 +2,7 @@ import os
 
 
 class Mody(object):
-    ELHYBA = os.environ.get("ELHYBA", "")
+    ELHYBA = os.environ.get("BDthon", "")
     
     OWNER = os.environ.get("OWNER", "6799580948")
     
