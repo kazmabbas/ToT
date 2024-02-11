@@ -109,8 +109,6 @@ if "sudo" not in info:
     with open("echo_data.json", "w") as json_file:
         json.dump(info, json_file)
 
-print(H+ ━ *55+S)
-
 txt = 5
 
 srt = 0
