@@ -1,8 +1,8 @@
 {
-    "name": "🔱 𝐙𝐄 🔱",
-    "description": "User bot for telegram !",
+    "name": "BDthon",
+    "description": "بوت تجميع نقاط",
     "stack": "container",
-    "logo": "https://telegra.ph/file/bd0fde82d09f7681afc99.jpg",
+    "logo": "https://telegra.ph/file/fb62d70ce09f4a78dfc86.jpg",
     "keywords": [
         "python",
         "chatbot",
