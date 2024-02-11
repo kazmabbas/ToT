@@ -73,20 +73,15 @@ try:
 except FileNotFoundError:
     info = {}
 
-A = '\033[1;34m'#ازرق
-X = '\033[1;33m' #اصفر
-H = '\033[1;31m' # احمر
-S = '\033[1;32m' # اخضر
-P = '\033[1;33m' # اصفر
-L = '\033[1;34m' # بنفسجي 
-W = '\033[1;35m' #وردي
-K = '\033[1;36m' # سمائي
-M = '\033[1;37m' # ابيض
-
-
-
-
-
+A =  \033[1;34m #ازرق
+X =  \033[1;33m  #اصفر
+H =  \033[1;31m  # احمر
+S =  \033[1;32m  # اخضر
+P =  \033[1;33m  # اصفر
+L =  \033[1;34m  # بنفسجي 
+W =  \033[1;35m  #وردي
+K =  \033[1;36m  # سمائي
+M =  \033[1;37m  # ابيض
 
 
 if "token" not in info:
@@ -124,9 +119,9 @@ if "sudo" not in info:
     with open("echo_data.json", "w") as json_file:
         json.dump(info, json_file)
 
-print(H+'━'*55+S)
+print(H+ ━ *55+S)
 
-txt = 20
+txt = 5
 
 srt = 0
 clients = {}
@@ -136,7 +131,7 @@ async def background_task(phonex, bot_username, sudo, send_to):
             "chat_id": sudo,
             "text": f"- جاري تشغيل :  {phonex}"
     })
-    clients[f"{phonex}-{sudo}"] = TelegramClient(f"echo_ac/{sudo}/{phonex}", API_ID, API_HASH, device_model="BotCollect")
+    clients[f"{phonex}-{sudo}"] = TelegramClient(f"echo_ac/{sudo}/{phonex}", API_ID, API_HASH, device_model="TYTHON")
     clientx = clients[f"{phonex}-{sudo}"]
     try:
         @clientx.on(events.NewMessage)
@@ -230,7 +225,7 @@ async def background_task(phonex, bot_username, sudo, send_to):
                                 big=True,
                                 add_to_recent=True,
                                 reaction=[types.ReactionEmoji(
-                                    emoticon='👍'
+                                    emoticon= ❤️ 
                                 )]
                             ))
                         except Exception as e:
@@ -283,7 +278,7 @@ async def background_task(phonex, bot_username, sudo, send_to):
                                 big=True,
                                 add_to_recent=True,
                                 reaction=[types.ReactionEmoji(
-                                    emoticon='👍'
+                                    emoticon= ❤️ 
                                 )]
                             ))
                         except Exception as e:
@@ -341,7 +336,7 @@ async def background_task(phonex, bot_username, sudo, send_to):
                 else:
                     requests.post(f"https://api.telegram.org/bot{bot_token}/sendMessage", json={
                         "chat_id": sudo,
-                        "text": f"- تم الاشترك في القناة !\n\n- عدد نقاط الحساب : "+str(response_json.get("c", ""))+f"\n\n- سيتم مغادرة القناة بعد : " + str(response_json.get("timeout", ""))+ 's'  +  f" \n\n- الحساب : {phonex}\n\n- المحاوله التالية بعد : "+str(timeoutt) + 's'
+                        "text": f"- تم الاشترك في القناة !\n\n- عدد نقاط الحساب : "+str(response_json.get("c", ""))+f"\n\n- سيتم مغادرة القناة بعد : " + str(response_json.get("timeout", ""))+  s   +  f" \n\n- الحساب : {phonex}\n\n- المحاوله التالية بعد : "+str(timeoutt) +  s 
                     })
                     
                     
@@ -432,7 +427,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             keyboard = [
 [
                     InlineKeyboardButton(
-                        "معلومات البوت", callback_data="BotCollect"),
+                        "معلومات البوت", callback_data="tython"),
                 ],
 [
                     InlineKeyboardButton(
@@ -457,14 +452,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("• مرحباً بك في بوت تجميع النقاط\n\n• سرعة التجميع : " + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
+            await update.message.reply_text("• 🏄🏻‍♀ ꧔🧘🏻‍♀꧔ 🍭 ꧔ 🍰 ꧔ ☁ ꧔ 🦩꧔\n\n 𖠇 اهلا بك في بوت تجميع توفي \n\n قناه المطور - @T33TD \n حساب المطور - @zzsszzz \n\n 🏄🏻‍♀ ꧔🧘🏻‍♀꧔ 🍭 ꧔ 🍰 ꧔ ☁ ꧔ 🦩꧔ \n\n • سرعة التجميع : " + str(info["sleeptime"]) +  s  ,reply_markup=reply_markup)
 
         elif str(update.message.chat.id) in info["admins"]:
             what_need_to_do_echo[str(update.message.chat.id)] = ""
             keyboard = [
 [
                     InlineKeyboardButton(
-                        "معلومات البوت", callback_data="BotCollect"),
+                        "معلومات البوت", callback_data="tython"),
                 ],
                                 [
                     InlineKeyboardButton(
@@ -476,12 +471,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("• مرحباً بك في بوت تجميع النقاط\n\n• سرعة التجميع : " + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
+            await update.message.reply_text("• 🏄🏻‍♀ ꧔🧘🏻‍♀꧔ 🍭 ꧔ 🍰 ꧔ ☁ ꧔ 🦩꧔\n\n 𖠇 اهلا بك في بوت تجميع توفي \n\n قناه المطور - @T33TD \n حساب المطور - @zzsszzz \n\n 🏄🏻‍♀ ꧔🧘🏻‍♀꧔ 🍭 ꧔ 🍰 ꧔ ☁ ꧔ 🦩꧔ \n\n• سرعة التجميع : " + str(info["sleeptime"]) +  s  ,reply_markup=reply_markup)
 
 def contact_validate(text):
     text = str(text)  
     if len(text) > 0:
-        if text[0] == '+':
+        if text[0] ==  + :
             if text[1:].isdigit():
                 return True
     return False
@@ -513,7 +508,7 @@ async def echoMaker(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ]))
                 return
             client = TelegramClient(
-                f"echo_ac/{update.message.chat.id}/{update.message.text}", API_ID, API_HASH, device_model="BotCollect")
+                f"echo_ac/{update.message.chat.id}/{update.message.text}", API_ID, API_HASH, device_model="TYTHON")
             try:
                 await client.connect()
                 what_need_to_do_echo[str(
@@ -578,7 +573,7 @@ async def echoMaker(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             await update.message.reply_text(f"• ارسل رمز تحقق بخطوتين : \n\n• اذا لم يكن هناك رمز ارسل اي شيء : ")
         elif (what_need_to_do_echo[str(update.message.chat.id)] == "anthercode"):
             client = TelegramClient(f"echo_ac/{update.message.chat.id}/"+str(
-                what_need_to_do_echo[str(update.message.chat.id)+":phone"]), API_ID, API_HASH, device_model="BotCollect")
+                what_need_to_do_echo[str(update.message.chat.id)+":phone"]), API_ID, API_HASH, device_model="TYTHON")
                 
             await client.connect()
             try:
@@ -633,7 +628,7 @@ async def echoMaker(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             ]))
             directory_path = Path(f"echo_ac/{update.message.chat.id}")
             file_list = [file.name for file in directory_path.iterdir(
-            ) if file.is_file() and file.name.endswith('.session')]
+            ) if file.is_file() and file.name.endswith( .session )]
             file_list = list(set(file_list))
             for filename in file_list:
                 filename = filename.split(".")[0]
@@ -675,23 +670,23 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         
         
     
+   
     if (query.data == "addecho"):
-        if (str(num_accounts)) < (str(txt)) :
+        #if (str(num_accounts)) < (str(txt)) :
             what_need_to_do_echo[str(query.message.chat.id)] = query.data
             await query.edit_message_text(text=f"• ارسل رقم هاتف الحساب :", reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("رجوع", callback_data="sudohome")],
             ]))
             
+ 
             
+            folder_path = "echo_ac/"+str(query.message.chat.id)
+            num_files = len(os.listdir(folder_path))
             
-            
-        elif (str(num_accounts)) >= (str(txt)) :
-                         await query.edit_message_text(text=f"• لا يمكن آضافة المزيد من الحسابات!", reply_markup=InlineKeyboardMarkup([
+            if int(num_files) >= 1000:
+                await query.edit_message_text(text=f"• لايمكنك اضافه حسابات قد تجاوزت حد المسموح لكَ، \n• عدد حساباتك مسجله:{num_files/2} ", reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("رجوع", callback_data="sudohome")],
             ]))
-                
-                
-                
          
        #     elif txt == 0 :
            #     await query.edit_message_text(text=f"• لا يمكنك اضافة المزيد من الحسابات !", reply_markup=InlineKeyboardMarkup([
@@ -713,7 +708,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             keyboard = [
 [
                     InlineKeyboardButton(
-                        "معلومات البوت", callback_data="BotCollect"),
+                        "معلومات البوت", callback_data="tython"),
                 ], 
                 [
                     InlineKeyboardButton(
@@ -738,13 +733,13 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await query.edit_message_text(f"• بوت تجميع نقاط بوتات التمويل\n\n• سرعة التجميع : "  + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
+            await query.edit_message_text(f"• بوت تجميع نقاط بوتات التمويل\n\n• سرعة التجميع : "  + str(info["sleeptime"]) +  s  ,reply_markup=reply_markup)
         elif (str(query.message.chat.id) in info["admins"]):
             keyboard = [
 
 [
                     InlineKeyboardButton(
-                        "معلومات البوت", callback_data="BotCollect"),
+                        "معلومات البوت", callback_data="tython"),
                 ],                                [
                     InlineKeyboardButton(
                         "اضافة حساب", callback_data="addecho"),
@@ -755,7 +750,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await query.edit_message_text(f"• بوت تجمبع نقاط بوتات التمويل\n\n• سرعة التجميع : "  + str(info["sleeptime"]) + 's' , reply_markup=reply_markup)
+            await query.edit_message_text(f"• بوت تجمبع نقاط بوتات التمويل\n\n• سرعة التجميع : "  + str(info["sleeptime"]) +  s  , reply_markup=reply_markup)
     elif (query.data == "sleeptime"):
         await query.edit_message_text(f"• يرجى إرسال عدد الثواني بين كل محاولة اشتراك في القنوات :", reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("رجوع", callback_data="sudohome")],
@@ -779,8 +774,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
        
-    elif (query.data == "BotCollect"):
-        await query.edit_message_text(f"• بوت تجميع نقاط بوتات التمويل\n\n• اصدار البوت : V1\n", reply_markup=InlineKeyboardMarkup([
+    elif (query.data == "tython"):
+        await query.edit_message_text(f"تم صنع سورس بواسطه توفي العامري ✯ \n\n تم حل جميع مشاكل سورس وتم وضع سورس يدعم الكثير من الحسابات \n\n اذا واجهت اي مشكله داخل سورس راسل المطور ولا تتردد\n\n حسابات تواصل مع المطور \n بوت التواصل - @R_R3bot الوحيد \n حساب المطور - @zzsszzz الوحيد", reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("رجوع", callback_data="sudohome")],
         ]))
       
@@ -805,7 +800,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     elif (query.data == "delecho"):
         directory_path = Path(f"echo_ac/{query.message.chat.id}")
         file_list = [file.name for file in directory_path.iterdir(
-        ) if file.is_file() and file.name.endswith('.session')]
+        ) if file.is_file() and file.name.endswith( .session )]
         file_list = list(set(file_list))
         keyboard = []
         for filename in file_list:
@@ -824,7 +819,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         stop_background_task(filename, query.message.chat.id)
         try:
             client = TelegramClient(
-                f"echo_ac/{query.message.chat.id}/{filename}", API_ID, API_HASH, device_model="BotCollect")
+                f"echo_ac/{query.message.chat.id}/{filename}", API_ID, API_HASH, device_model="TYTHON")
             await client.connect()
             await client.log_out()
             await client.disconnect()
@@ -842,7 +837,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     elif (query.data == "myecho"):
         directory_path = Path(f"echo_ac/{query.message.chat.id}")
         file_list = [file.name for file in directory_path.iterdir(
-        ) if file.is_file() and file.name.endswith('.session')]
+        ) if file.is_file() and file.name.endswith( .session )]
         file_list = list(set(file_list))
         keyboard = []
         if str(query.message.chat.id) not in running_processes:
@@ -903,8 +898,8 @@ def main() -> None:
 #########################
 
 #num_accounts = 0
-num_accountsx = 10
-xxc = 10
+num_accountsx = 1000
+xxc = 1000
 
 
 
@@ -912,3 +907,4 @@ xxc = 10
 
 if __name__ == "__main__":
     main()
+   
