@@ -11,22 +11,22 @@
     "env": {
         "API_ID": {
             "description": "ايبي ايدي",
-            "value": "",
+            "value": "27726956",
             "required": true
         },
         "API_HASH": {
             "description": "ايبي هاش",
-            "value": "",
+            "value": "a9528fa819d420fc5c0b6d04a77e05f0",
             "required": true
         },
         "OWNER": {
             "description": "ايـدي الـمـطور",
-            "value": "",
+            "value": "6799580948",
             "required": true
         },
         "ELHYBA": {
             "description": "توكن البوت",
-            "value": "",
+            "value": "6446060894:AAEazPGZXkVmMbf1WuKpZvYToVdoDsjPo9g",
             "required": true
     }
   }
