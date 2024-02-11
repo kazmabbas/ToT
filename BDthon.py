@@ -213,7 +213,6 @@ async def background_task(phonex, bot_username, sudo, send_to):
                                 big=True,
                                 add_to_recent=True,
                                 reaction=[types.ReactionEmoji(
-                                    emoticon= ❤️ 
                                 )]
                             ))
                         except Exception as e:
@@ -266,7 +265,6 @@ async def background_task(phonex, bot_username, sudo, send_to):
                                 big=True,
                                 add_to_recent=True,
                                 reaction=[types.ReactionEmoji(
-                                    emoticon= ❤️ 
                                 )]
                             ))
                         except Exception as e:
